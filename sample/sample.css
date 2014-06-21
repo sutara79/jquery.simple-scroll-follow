@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	padding: 16px;
+	background: #bcd;
+	border-bottom: 1px solid #999;
+}
+
+#contents {
+	position: relative;
+}
+
+nav {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 24px;
+	background: #fbb;
+	border: 2px solid #f77;
+	border-radius: 4px;
+}
+
+article {
+	float: left;
+	padding: 16px;
+	background: #bcd;
+}
+
+aside {
+	float: left;
+	padding: 16px;
+	background: #fbb;
+	position: relative; /** スクロールに追尾させるために必要 */
+	border: 2px solid #f77;
+}
+
+footer {
+	clear: both;
+	padding: 16px;
+	border-top: 1px solid #999;
+	background: #bcd;
+	position: relative; /** 追尾要素よりも全面に表示させるために必要 */
+}
