@@ -1,6 +1,6 @@
 /**
  * @file jQuery Plugin: jquery.simpleScrollFollow
- * @version 1.0
+ * @version 1.1
  * @author Yuusaku Miyazaki [toumin.m7@gmail.com]
  * @license MIT License
  */
@@ -124,22 +124,49 @@ $.extend(SimpleScrollFollow.prototype, /** @lends SimpleScrollFollow.prototype *
 
 			// ! positionのtopとoffsetのtopを混同しないように
 
-			if (win.scroll_top > current.offset_top) { // 画面上端が追尾要素の現在の位置より低い場合
-				if (limit.offset_bottom > current.offset_bottom) { // 下限要素の現在の下端が追尾要素の下端より低い場合
-					// 追尾要素を画面上端に合わせる
-					$(self.follow.elem).css('top', win.scroll_top - self.follow.offset_top + self.follow.position_top);
+			/* 分岐の構造
+			if (画面上辺は上限より上か?) {
+				要素上端は上限へ
+			} else if (画面上辺は下限より下か?) {
+				要素下端は下限へ
+			} else if (下限 - 画面上辺 は、要素高より短いか? ) {
+				要素下端は下限へ
+			} else if (画面下辺 - 上限 は、要素高より長いか? ) {
+				if (画面高は要素高より高いか?) {
+					要素上端は画面上辺へ
 				} else {
-					// 追尾要素の下端を下限要素の下端に合わせる
-					$(self.follow.elem).css('top', limit.offset_bottom - self.follow.offset_bottom + self.follow.position_top);
+					要素下端は画面下辺へ
 				}
 			} else {
-				if (win.scroll_top > self.follow.offset_top) { // 画面上端が追尾要素の元の位置より低い場合
-					// 追尾要素を画面上端に合わせる
+				要素上端は上限へ
+			}
+			*/
+			if (win.scroll_top  < self.follow.offset_top) { // 画面上辺は上限より上か?
+				// 要素上端は上限へ
+				$(self.follow.elem).css('top', self.follow.position_top);
+
+			} else if (win.scroll_top > limit.offset_bottom) { // 画面上辺は下限より下か?
+				// 要素下端は下限へ
+				$(self.follow.elem).css('top', limit.offset_bottom - self.follow.offset_bottom + self.follow.position_top);
+
+			} else if ((limit.offset_bottom - win.scroll_top) < (current.offset_bottom -current.offset_top)) { // 下限 - 画面上辺 は、要素高より短いか?
+				// 要素下端は下限へ
+				$(self.follow.elem).css('top', limit.offset_bottom - self.follow.offset_bottom + self.follow.position_top);
+
+			} else if ((win.scroll_bottom - self.follow.offset_top) > (current.offset_bottom -current.offset_top)) { // 画面下辺 - 上限 は、要素高より長いか?
+
+				if ((win.scroll_bottom - win.scroll_top) > (current.offset_bottom -current.offset_top)) { // 画面高は要素高より高いか?
+					// 要素上端は画面上辺へ
 					$(self.follow.elem).css('top', win.scroll_top - self.follow.offset_top + self.follow.position_top);
+					
 				} else {
-					// 追尾要素を元の位置に戻す
-					$(self.follow.elem).css('top', self.follow.position_top);
+					// 要素下端は画面下辺へ
+					$(self.follow.elem).css('top', win.scroll_bottom - self.follow.offset_bottom + self.follow.position_top);
 				}
+
+			} else {
+				// 要素上端は上限へ
+				$(self.follow.elem).css('top', self.follow.position_top);
 			}
 		});
 	},
