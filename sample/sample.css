@@ -3,6 +3,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	background: url(null) fixed; /* Google Chromeでの画面のチラツキを防ぐ */
 }
 
 header {
@@ -31,7 +32,9 @@ article {
 	background: #bcd;
 }
 
-aside {
+aside,
+#set_min_width
+{
 	float: left;
 	padding: 16px;
 	background: #fbb;

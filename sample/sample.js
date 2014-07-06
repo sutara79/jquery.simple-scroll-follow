@@ -1,6 +1,13 @@
 jQuery(document).ready(function($) {
+
 	// aside に対してプラグインを適用する
 	$('aside').simpleScrollFollow();
+
+	// min_widthを指定する
+	$('#set_min_width').simpleScrollFollow({
+		min_width: 992,
+		limit_elem: $('article')
+	});
 
 	// nav に対してプラグインを適用し、処理を追加するためにインスタンスを取得する
 	var arr_instance = $('nav').simpleScrollFollow({

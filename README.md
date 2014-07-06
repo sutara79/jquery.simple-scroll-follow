@@ -24,6 +24,10 @@ http://www.usamimi.info/~sutara/sample2/simpleScrollFollow/JSDoc/
 
 ###### CSS
 ```css
+body {
+	background: url(null) fixed; /* for Google Chrome */
+}
+
 #foo {
 	position: absolute; /* or relative */
 }
