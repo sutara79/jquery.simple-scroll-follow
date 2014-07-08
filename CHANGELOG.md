@@ -1,5 +1,12 @@
 # Change Log
 
+### v2.0 (2014-07-08)
+- Parameters for public method `.setFollow()` and `.setOption()` was changed.
+  (パブリックメソッド `.setFollow()`と`.setOption()`に必要な引数を変更しました。)
+
+- `position: absolute` is required.
+  (追尾要素は`position: absolute`が必須となりました。)
+
 ### v1.2 (2014-07-06)
 - Algorithm was modified so that elements followed definitely.
   (要素が正しく追尾するように、追尾の判断基準を修正しました。)

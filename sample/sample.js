@@ -1,30 +1,26 @@
 jQuery(document).ready(function($) {
+	// ページ内リンクのスクロール
+	$('a[href^=#]').click(function() {
+		var href= $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		var position = target.offset().top - 10;
+		$('body,html').animate({scrollTop: position}, 200, 'swing');
+		history.pushState('', '', $(this)[0].href);
+		return false;
+	});
 
-	// aside に対してプラグインを適用する
-	$('aside').simpleScrollFollow();
+	// 英語・日本語切り替え
+	$('#language button').click(function(ev) {
+		$('*[class*=lang_]').hide();
+		$('button[id*=lang_]').removeAttr('disabled');
+		$('.' + $(ev.target).attr('id')).show();
+		$(ev.target).attr('disabled', 'disabled');
+	});
+	$('#lang_en').trigger('click');
 
-	// min_widthを指定する
-	$('#set_min_width').simpleScrollFollow({
+	// 追尾スクロール (英語・日本語切り替えよりも後にすること)
+	$('nav').simpleScrollFollow({
 		min_width: 992,
 		limit_elem: $('article')
-	});
-
-	// nav に対してプラグインを適用し、処理を追加するためにインスタンスを取得する
-	var arr_instance = $('nav').simpleScrollFollow({
-		instance: true,
-		limit_elem: $('article')
-	});
-	$(arr_instance).each(function() {
-		var self = this;
-		// アンカーのクリックによってスクロールの有効・無効を切り替える
-		$(self.follow.elem).find('#toggle_scroll').on('click', function() {
-			if ($(this).text() == 'click to disable scroll') {
-				self.setEnabled(false);
-				$(this).text('click to enable scroll');
-			} else {
-				self.setEnabled(true);
-				$(this).text('click to disable scroll');
-			}
-		});
 	});
 });

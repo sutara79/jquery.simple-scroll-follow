@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	background: url(null) fixed;
+}
+
+header {
+	padding: 16px;
+	background: #bcd;
+	border-bottom: 1px solid #999;
+}
+
+#contents {
+	position: relative;
+	margin: auto;
+}
+
+/* for PC */
+@media screen and (min-width:992px) {
+	#contents {
+		width: 800px;
+	}
+
+	article {
+		box-sizing: border-box;
+		width: 500px;
+		padding: 16px;
+		background: #bcd;
+		position: static;
+	}
+
+	aside {
+		box-sizing: border-box;
+		width: 300px;
+		padding: 16px;
+		background: #fbb;
+		position: absolute;
+		top: 0px;
+		left: 500px;
+		border: 2px solid #f77;
+	}
+}
+
+/* for Smart Phone */
+@media screen and (max-width:991px) {
+	#contents {
+		width: 600px;
+	}
+
+	article {
+		box-sizing: border-box;
+		width: 600px;
+		padding: 16px;
+		background: #bcd;
+		position: static;
+	}
+
+	aside {
+		box-sizing: border-box;
+		width: 600px;
+		padding: 16px;
+		background: #fbb;
+		position: static;
+		top: auto;
+		left: auto;
+		border: 2px solid #f77;
+	}
+}

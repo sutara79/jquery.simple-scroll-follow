@@ -2,145 +2,301 @@
 <html lang="ja">
 	<head>
 		<meta charset="utf-8">
-		<title>jquery.simpleScrollFollow</title>
-		<link rel="stylesheet" type="text/css" href="sample/sample.css">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>jquery.addInputArea.js</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="sample/sample.css">
 	</head>
 	<body>
-		<header>
-			<h1>jquery.simpleScrollFollow</h1>
-			<time>version: 1.2 (2014-07-06)</time>
-			<ul>
-				<li><a href="https://github.com/SutaraLumpur/jquery.simpleScrollFollow">GitHub</a></li>
-				<li><a href="JSDoc/">JSDoc</a></li>
-			</ul>
-		</header>
-		<div id="contents">
-			<nav>
-				<h3>nav</h3>
-				<p>(absolute)</p>
-				<a href="javascript:void(0)" id="toggle_scroll">click to disable scroll</a>
-			</nav>
-			<article>
-				<h2>article</h2>
-				<p>(float)</p>
-				<p>1</p>
-				<p>2</p>
-				<p>3</p>
-				<p>4</p>
-				<p>5</p>
-				<p>6</p>
-				<p>7</p>
-				<p>8</p>
-				<p>9</p>
-				<p>10</p>
-				<p>11</p>
-				<p>12</p>
-				<p>13</p>
-				<p>14</p>
-				<p>15</p>
-				<p>16</p>
-				<p>17</p>
-				<p>18</p>
-				<p>19</p>
-				<p>20</p>
-				<p>21</p>
-				<p>22</p>
-				<p>23</p>
-				<p>24</p>
-				<p>25</p>
-				<p>26</p>
-				<p>27</p>
-				<p>28</p>
-				<p>29</p>
-				<p>30</p>
-				<p>31</p>
-				<p>32</p>
-				<p>33</p>
-				<p>34</p>
-				<p>35</p>
-				<p>36</p>
-				<p>37</p>
-				<p>38</p>
-				<p>39</p>
-				<p>40</p>
-			</article>
-			<aside>
-				<h2>aside</h2>
-				<p>(float, relative)</p>
-				<p>1</p>
-				<p>2</p>
-				<p>3</p>
-				<p>4</p>
-				<p>5</p>
-				<p>6</p>
-				<p>7</p>
-				<p>8</p>
-				<p>9</p>
-				<p>10</p>
-				<p>11</p>
-				<p>12</p>
-				<p>13</p>
-				<p>14</p>
-				<p>15</p>
-				<p>16</p>
-				<p>17</p>
-				<p>18</p>
-				<p>19</p>
-				<p>20</p>
-			</aside>
-			<div id="set_min_width">
-				<h2>min_width: 992</h2>
-				<p>(float, relative)</p>
-				<p>1</p>
-				<p>2</p>
-				<p>3</p>
-				<p>4</p>
-				<p>5</p>
-				<p>6</p>
-				<p>7</p>
-				<p>8</p>
-				<p>9</p>
-				<p>10</p>
-				<p>11</p>
-				<p>12</p>
-				<p>13</p>
-				<p>14</p>
-				<p>15</p>
-				<p>16</p>
-				<p>17</p>
-				<p>18</p>
-				<p>19</p>
-				<p>20</p>
+		<header class="jumbotron">
+			<div class="container">
+				<h1>jquery.simpleScrollFollow
+				</h1>
+				<p class="lang_en">
+					jQuery plugin for following after scrolling window.
+				</p>
+				<p class="lang_ja">
+					指定した要素を画面スクロールに追従させます。
+				</p>
+				<dl class="dl-horizontal">
+					<dt>Version</dt><dd>2.0</dd>
+					<dt>Update</dt><dd>2014-07-08</dd>
+					<dt>Author</dt><dd>Yuusaku Miyazaki</dd>
+					<dt>License</dt><dd><a href="http://opensource.org/licenses/mit-license.php">MIT License</a></dd>
+				</dl>
+				<a href="https://github.com/SutaraLumpur/jquery.simpleScrollFollow" class="btn btn-primary" role="button">GitHub »</a>
+				<a href="JSDoc/" class="btn btn-primary" role="button">JSDoc »</a>
 			</div>
-		</div>
+		</header>
+		<div class="container">
+			<div id="contents" class="row">
+				<nav id="index">
+					<div id="language" class="btn-group">
+						<button id="lang_en" class="btn btn-default">English</button>
+						<button id="lang_ja" class="btn btn-default">Japanese</button>
+					</div>
+					<h3>
+						<span class="lang_en">Index</span>
+						<span class="lang_ja">目次</span>
+					</h3>
+					<div class="list-group">
+						<a class="list-group-item" href="#basic">
+							<span class="lang_en">Basic</span>
+							<span class="lang_ja">基本</span>
+						</a>
+						<a class="list-group-item" href="#attention">
+							<span class="lang_en">Attention</span>
+							<span class="lang_ja">注意点</span>
+						</a>
+						<a class="list-group-item" href="#limit_elem">
+							<span class="lang_en">"limit_elem" for setting bottom limit</span>
+							<span class="lang_ja">"limit_elem"で下限を設定</span>
+						</a>
+						<a class="list-group-item" href="#min_width">
+							<span class="lang_en">"min_width" for responsive design</span>
+							<span class="lang_ja">"min_width"でレスポンシブデザインに対応</span>
+						</a>
+						<a class="list-group-item" href="#enabled">
+							<span class="lang_en">"enabled" for disabling this plugin by default</span>
+							<span class="lang_ja">"enabled"で追尾の有効・無効を設定する</span>
+						</a>
+						<a class="list-group-item" href="#instance">
+							<span class="lang_en">"instance" for getting plugin object</span>
+							<span class="lang_ja">"instance"でプラグインのオブジェクトを受け取る</span>
+						</a>
+						<a class="list-group-item" href="#complex">
+							<span class="lang_en">A more complex example</span>
+							<span class="lang_ja">複雑な使用例</span>
+						</a>
+					</div>
+				</nav>
+				<article>
+					<section id="basic" class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<span class="lang_en">Basic</span>
+								<span class="lang_ja">基本</span>
+							</h3>
+						</div>
+						<div class="panel-body">
+							<a class="btn btn-success" href="sample/basic/" target="_blank">Sample »</a>
+							<h6>HTML</h6>
+<pre>
+&lt;aside&gt;Element to follow&lt;/aside&gt;
+
+&lt;script src="http://code.jquery.com/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.simpleScrollFollow.1.0.js"&gt;&lt;/script&gt;
+</pre>
+							<h6>CSS</h6>
+<pre>
+aside {
+  position: <span class="red">absolute</span>;
+}
+</pre>
+							<h6>JavaScript</h6>
+<pre>
+$('aside').simpleScrollFollow();
+</pre>
+						 </div>
+					</section>
+
+					<section id="attention" class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<span class="lang_en">Attention</span>
+								<span class="lang_ja">注意点</span>
+							</h3>
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li>
+									<p class="lang_en">
+										<code>position: absolute</code> is required.
+									</p>
+									<p class="lang_ja">
+										追尾する要素には<code>position: absolute</code>が必須です。
+									</p>
+								</li>
+								<li>
+									<p class="lang_en">
+										It is not required, but for preventing a screen flickers on Google Chrome, the following is recommended.
+									</p>
+									<p class="lang_ja">
+										必須ではありませんが、Google Chromeで追尾要素がちらつく現象を防ぐため、下記の設定をお勧めします。
+									</p>
+									<h6>CSS</h6>
+<pre>
+body {
+  background: url(null) fixed;
+}
+</pre>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<section id="limit_elem" class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<span class="lang_en">"limit_elem" for setting bottom limit.</span>
+								<span class="lang_ja">"limit_elem"で下限を設定</span>
+							</h3>
+						</div>
+						<div class="panel-body">
+							<a class="btn btn-success" href="sample/limit_elem/" target="_blank">Sample »</a>
+							<h6>HTML</h6>
+<pre>
+&lt;div&gt;
+  &lt;article&gt; ... &lt;/article&gt;
+  &lt;aside&gt; ... &lt;/aside&gt;
+&lt;/div&gt;
+</pre>
+							<h6>JavaScript</h6>
+<pre>
+$('aside').simpleScrollFollow({
+  <span class="green">limit_elem</span>: <span class="red">'article'</span>
+});
+</pre>
+							<p class="lang_en">
+								If <code>limit_elem</code> is empty, it will be set to <code>'window'</code>.
+							</p>
+							<p class="lang_ja">
+								<code>limit_elem</code>を指定子ない場合は、下限はウィンドウの下端となります。
+							</p>
+						</div>
+					</section>
+
+					<section id="min_width" class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<span class="lang_en">"min_width" for responsive design</span>
+								<span class="lang_ja">"min_width"でレスポンシブデザインに対応</span>
+							</h3>
+						</div>
+						<div class="panel-body">
+							<a class="btn btn-success" href="sample/min_width/" target="_blank">Sample »</a>
+							<h6>CSS</h6>
+<pre>
+/* for PC */
+@media screen and (min-width:992px) {
+  aside {
+    width: 300px;
+    position: absolute;
+    top: 0px;
+    left: 500px;
+  }
+}
+
+/* for Smart Phone */
+@media screen and (max-width:991px) {
+  aside {
+    width: 600px;
+    position: static;
+    top: auto;
+    left: auto;
+  }
+}
+</pre>
+							<h6>JavaScript</h6>
+<pre>
+$('aside').simpleScrollFollow({
+  <span class="green">min_width</span>: <span class="red">992</span> // number. do not add 'px'.
+});
+</pre>
+					</section>
+
+					<section id="enabled" class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<span class="lang_en">"enabled" for disabling this plugin by default</span>
+								<span class="lang_ja">"enabled"で追尾の有効・無効を設定する</span>
+							</h3>
+						</div>
+						<div class="panel-body">
+							<a class="btn btn-success" href="sample/enabled/" target="_blank">Sample »</a>
+							<h6>JavaScript</h6>
+<pre>
+$('#enabled').simpleScrollFollow({
+  <span class="green">enabled</span>: <span class="red">true</span>
+});
+$('#disabled').simpleScrollFollow({
+  <span class="green">enabled</span>: <span class="red">false</span>
+});
+</pre>
+						</div>
+					</section>
+
+					<section id="instance" class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<span class="lang_en">"instance" for getting plugin object</span>
+								<span class="lang_ja">"instance"でプラグインのオブジェクトを受け取る</span>
+							</h3>
+						</div>
+						<div class="panel-body">
+							<a class="btn btn-success" href="sample/instance/" target="_blank">Sample »</a>
+							<h6>JavaScript</h6>
+<pre>
+var arr_instance = $('aside').simpleScrollFollow({
+  <span class="green">instance</span>: <span class="red">true</span>
+});
+
+$(arr_instance).each(function() {
+  var self = this;
+  $('aside #toggle_scroll').click(function() {
+    if ($(this).text() == 'click to disable scroll') {
+      self.<span class="green">setEnabled</span>(false);
+      $(this).text('click to enable scroll');
+    } else {
+      self.<span class="green">setEnabled</span>(true);
+      $(this).text('click to disable scroll');
+    }
+  });
+});
+</pre>
+							<p class="lang_en">
+								Please read JSDoc what kind of public method you can use.
+							</p>
+							<p class="lang_ja">
+								利用可能な公開メソッドについてはJSDocをご覧ください。
+							</p>
+							<a class="btn btn-primary" href="JSDoc/SimpleScrollFollow.html" target="_blank">JSDoc »</a>
+						</div>
+					</section>
+
+					<section id="complex" class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<span class="lang_en">A more complex example</span>
+								<span class="lang_ja">複雑な使用例</span>
+							</h3>
+						</div>
+						<div class="panel-body">
+							<a class="btn btn-success" href="sample/complex/" target="_blank">Sample »</a>
+							<p class="lang_en">
+								In addition, the plugin is used in <strong>this page</strong>.
+							</p>
+							<p class="lang_ja">
+								なお、このページでもこのプラグインを利用しています。
+							</p>
+						</div>
+					</section>
+				</article>
+			</div><!-- .row -->
+		</div><!-- .container -->
 		<footer>
-			<h3>footer</h3>
-			<p>(relative)</p>
-			<p>1</p>
-			<p>2</p>
-			<p>3</p>
-			<p>4</p>
-			<p>5</p>
-			<p>6</p>
-			<p>7</p>
-			<p>8</p>
-			<p>9</p>
-			<p>10</p>
-			<p>11</p>
-			<p>12</p>
-			<p>13</p>
-			<p>14</p>
-			<p>15</p>
-			<p>16</p>
-			<p>17</p>
-			<p>18</p>
-			<p>19</p>
-			<p>20</p>
+			<div class="container">
+				powered by <a href="http://www.usamimi.info/new/index.html">usamimi.info</a>, <a href="http://getbootstrap.com/">Bootstrap</a>
+			</div>
 		</footer>
+		<div id="jump_to_top">
+			<a href="#" class="btn btn-default">Top</a>
+		</div>
 
 		<!-- JavaScript -->
 		<script src="http://code.jquery.com/jquery.min.js"></script>
-		<script src="jquery.simpleScrollFollow.1.2.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="jquery.simpleScrollFollow.2.0.js"></script>
 		<script src="sample/sample.js"></script>
 	</body>
 </html>

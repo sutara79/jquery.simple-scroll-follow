@@ -1,51 +1,96 @@
 @charset "utf-8";
 
 body {
-	margin: 0;
-	padding: 0;
-	background: url(null) fixed; /* Google Chromeでの画面のチラツキを防ぐ */
-}
-
-header {
-	padding: 16px;
-	background: #bcd;
-	border-bottom: 1px solid #999;
+	-webkit-text-size-adjust: 100%;
 }
 
 #contents {
 	position: relative;
 }
 
-nav {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	padding: 24px;
-	background: #fbb;
-	border: 2px solid #f77;
-	border-radius: 4px;
+/* for PC */
+@media screen and (min-width:992px) {
+	nav {
+		position: absolute;
+		box-sizing: border-box;
+		padding: 0 15px;
+		width: 34%;
+		top: 0px;
+		left: auto;
+		right: auto;
+		bottom: auto;
+	}
+
+	article {
+		position: relative;
+		box-sizing: border-box;
+		padding: 0 15px;
+		width: 66%;
+		top: 0px;
+		left: 34%;
+		right: auto;
+		bottom: auto;
+	}
 }
 
-article {
-	float: left;
-	padding: 16px;
-	background: #bcd;
-}
+/* for Smart Phone */
+@media screen and (max-width:991px) {
+	nav {
+		position: static;
+		box-sizing: border-box;
+		padding: 0 15px;
+		width: 100%;
+		top: auto;
+		left: auto;
+		right: auto;
+		bottom: auto;
+	}
 
-aside,
-#set_min_width
-{
-	float: left;
-	padding: 16px;
-	background: #fbb;
-	position: relative; /** スクロールに追尾させるために必要 */
-	border: 2px solid #f77;
+	article {
+		position: static;
+		box-sizing: border-box;
+		padding: 0 15px;
+		width: 100%;
+		top: auto;
+		left: auto;
+		right: auto;
+		bottom: auto;
+	}
 }
 
 footer {
-	clear: both;
-	padding: 16px;
-	border-top: 1px solid #999;
-	background: #bcd;
-	position: relative; /** 追尾要素よりも全面に表示させるために必要 */
+	background: #eee;
+}
+
+footer div {
+	padding: 16px 0px;
+	text-align: right;
+}
+
+h6 {
+	color: #777;
+	font-size: 14px;
+}
+
+#list4 th:nth-child(3) {
+	min-width: 120px;
+}
+
+pre {
+	font-size: 16px;
+}
+
+article form a.btn,
+article form input,
+article form button {
+	margin-bottom: 4px;
+}
+
+.green { color: #5cb85c;}
+.red { color: #d9534f;}
+
+#jump_to_top {
+	position: fixed;
+	right: 16px;
+	top: 16px;
 }

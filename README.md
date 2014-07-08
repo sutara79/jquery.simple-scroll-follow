@@ -12,14 +12,10 @@ http://www.usamimi.info/~sutara/sample2/simpleScrollFollow/JSDoc/
 ## Usage
 ###### HTML
 ```html
-<head>
-	<link rel="stylesheet" href="style.css">
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="jquery.simpleScrollFollow.1.0.js"></script>
-</head>
+<div id="foo">Element to follow</div>
 
-<body>
-	<div id="foo">elements to follow</div>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="jquery.simpleScrollFollow.1.0.js"></script>
 ```
 
 ###### CSS
@@ -29,7 +25,7 @@ body {
 }
 
 #foo {
-	position: absolute; /* or relative */
+	position: absolute;
 }
 ```
 
@@ -38,6 +34,11 @@ body {
 $('#foo').simpleScrollFollow();
 ```
 
+## Author
+Yuusaku Miyazaki (宮崎 雄策)
+
+- Mail: toumin.m7@gmail.com
+- [Blog](http://sutara79.hatenablog.com/entry/2014/06/21/185709)
 
 ## License
 [MIT License](http://www.opensource.org/licenses/mit-license.php)
