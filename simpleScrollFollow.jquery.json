@@ -1,6 +1,6 @@
 {
 	"name": "simpleScrollFollow",
-	"title": "jquery simpleScrollFollow", 
+	"title": "jquery.simpleScrollFollow", 
 	"description": "jQuery plugin for following after scrolling window.",
 	"version": "2.0.0",
 	"keywords": [
