@@ -8,6 +8,7 @@
 	],
 	"author": {
 		"name": "Yuusaku Miyazaki",
+		"email": "toumin.m7@gmail.com",
 		"url": "https://github.com/SutaraLumpur"
 	},
 	"licenses": [
@@ -19,7 +20,7 @@
 	"dependencies": {
 		"jquery": ">=1.9"
 	},
-	"docs": "http://www.usamimi.info/~sutara/sample2/simpleScrollFollow/",
-	"download": "https://github.com/SutaraLumpur/jquery.simpleScrollFollow/archive/master.zip",
-	"homepage": "https://github.com/SutaraLumpur/jquery.simpleScrollFollow/"
+	"demo": "http://www.usamimi.info/~sutara/sample2/simpleScrollFollow/",
+	"docs": "http://www.usamimi.info/~sutara/sample2/simpleScrollFollow/JSDoc",
+	"bugs": "https://github.com/SutaraLumpur/jquery.simpleScrollFollow/issues"
 }
