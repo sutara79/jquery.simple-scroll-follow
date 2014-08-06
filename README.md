@@ -37,7 +37,7 @@ $('#foo').simpleScrollFollow();
 ## Author
 Yuusaku Miyazaki (宮崎 雄策)
 
-- Mail: toumin.m7@gmail.com
+- Mail: [toumin.m7@gmail.com](mailto:toumin.m7@gmail.com)
 - [Blog](http://sutara79.hatenablog.com/entry/2014/06/21/185709)
 
 ## License
