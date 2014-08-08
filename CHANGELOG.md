@@ -1,4 +1,8 @@
-# Change Log for jquery.simpleScrollFollow
+# Change Log for jquery.simple-scroll-follow
+
+### 2.0.1 (2014-08-08)
+- Plugin name was changed.  
+  (プラグイン名、ファイル名、フォルダ名を変更しました。)
 
 ### v2.0.0 (2014-07-08)
 - Parameters for public method `.setFollow()` and `.setOption()` was changed.
