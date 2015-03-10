@@ -2,7 +2,7 @@
 	"name": "simple-scroll-follow",
 	"title": "jquery.simple-scroll-follow", 
 	"description": "jQuery plugin for following after scrolling window.",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"keywords": [
 		"scroll"
 	],
@@ -21,6 +21,6 @@
 		"jquery": ">=1.9"
 	},
 	"demo": "http://www.usamimi.info/~sutara/sample2/simple-scroll-follow/",
-	"docs": "http://www.usamimi.info/~sutara/sample2/simple-scroll-follow/JSDoc",
+	"docs": "http://www.usamimi.info/~sutara/sample2/simple-scroll-follow/jsdoc",
 	"bugs": "https://github.com/sutara79/jquery.simple-scroll-follow/issues"
 }

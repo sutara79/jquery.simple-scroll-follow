@@ -23,39 +23,45 @@
 
 
 
+
 <section>
 
 <header>
-    <h2>
-    SimpleScrollFollow
-    </h2>
     
-        <div class="class-description">要素ごとに適用される処理を集めたクラス</div>
+        <h2>
+        SimpleScrollFollow
+        </h2>
+        
+            <div class="class-description">要素ごとに適用される処理を集めたクラス</div>
+        
     
 </header>
 
 <article>
     <div class="container-overview">
     
+        
 
     
-        
-<dt>
+    <h2>Constructor</h2>
+    
+
     <h4 class="name" id="SimpleScrollFollow"><span class="type-signature"></span>new SimpleScrollFollow<span class="signature">(elem, option)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
 
-    
 
-    
 
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -124,15 +130,14 @@
     
     </tbody>
 </table>
-    
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
 
     
-<dl class="details">
-    
-
-        <h5 class="subsection-title">Properties:</h5>
-
-        <dl>
 
 <table class="props">
     <thead>
@@ -311,6 +316,7 @@
     
     </tbody>
 </table>
+
             </td>
         </tr>
 
@@ -339,7 +345,18 @@
 
     
     </tbody>
-</table></dl>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
 
     
 
@@ -362,7 +379,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="jquery.simple-scroll-follow.2.0.1.js.html">jquery.simple-scroll-follow.2.0.1.js</a>, <a href="jquery.simple-scroll-follow.2.0.1.js.html#line43">line 43</a>
+        <a href="jquery.simple-scroll-follow.2.0.2.js.html">jquery.simple-scroll-follow.2.0.2.js</a>, <a href="jquery.simple-scroll-follow.2.0.2.js.html#line43">line 43</a>
     </li></ul></dd>
     
 
@@ -374,25 +391,22 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
+
+
+
+
+
+
+
 
     
     </div>
-
-    
 
     
 
@@ -409,28 +423,347 @@
     
         <h3 class="subsection-title">Methods</h3>
 
-        <dl>
+        
             
-<dt>
+
+    
+
+    <h4 class="name" id="_calcOffsetBottom"><span class="type-signature">(private) </span>_calcOffsetBottom<span class="signature">(elem)</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+
+
+
+<div class="description">
+    offset_bottomを算出する
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>elem</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">算出する対象のHTML要素</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="jquery.simple-scroll-follow.2.0.2.js.html">jquery.simple-scroll-follow.2.0.2.js</a>, <a href="jquery.simple-scroll-follow.2.0.2.js.html#line118">line 118</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - 算出されたoffset_bottom
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_ehResize"><span class="type-signature">(private) </span>_ehResize<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    イベントハンドラ: 画面リサイズ
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="jquery.simple-scroll-follow.2.0.2.js.html">jquery.simple-scroll-follow.2.0.2.js</a>, <a href="jquery.simple-scroll-follow.2.0.2.js.html#line277">line 277</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="_ehScroll"><span class="type-signature">(private) </span>_ehScroll<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    イベントハンドラ: 画面スクロール
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="jquery.simple-scroll-follow.2.0.2.js.html">jquery.simple-scroll-follow.2.0.2.js</a>, <a href="jquery.simple-scroll-follow.2.0.2.js.html#line135">line 135</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
     <h4 class="name" id="moveDefaultPosition"><span class="type-signature"></span>moveDefaultPosition<span class="signature">(self)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        元の位置に戻る
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    元の位置に戻る
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -476,10 +809,19 @@
     
     </tbody>
 </table>
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -501,7 +843,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="jquery.simple-scroll-follow.2.0.1.js.html">jquery.simple-scroll-follow.2.0.1.js</a>, <a href="jquery.simple-scroll-follow.2.0.1.js.html#line64">line 64</a>
+        <a href="jquery.simple-scroll-follow.2.0.2.js.html">jquery.simple-scroll-follow.2.0.2.js</a>, <a href="jquery.simple-scroll-follow.2.0.2.js.html#line64">line 64</a>
     </li></ul></dd>
     
 
@@ -513,43 +855,45 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
+
+
+
+
+
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="setEnabled"><span class="type-signature"></span>setEnabled<span class="signature">(bool)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        スクロールを有効または無効にする
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    スクロールを有効または無効にする
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -595,10 +939,19 @@
     
     </tbody>
 </table>
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -620,7 +973,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="jquery.simple-scroll-follow.2.0.1.js.html">jquery.simple-scroll-follow.2.0.1.js</a>, <a href="jquery.simple-scroll-follow.2.0.1.js.html#line55">line 55</a>
+        <a href="jquery.simple-scroll-follow.2.0.2.js.html">jquery.simple-scroll-follow.2.0.2.js</a>, <a href="jquery.simple-scroll-follow.2.0.2.js.html#line55">line 55</a>
     </li></ul></dd>
     
 
@@ -632,43 +985,45 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
+
+
+
+
+
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="setFollow"><span class="type-signature"></span>setFollow<span class="signature">(self, elem)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        追尾要素の設定をする
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    追尾要素の設定をする
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -737,10 +1092,19 @@
     
     </tbody>
 </table>
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -762,7 +1126,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="jquery.simple-scroll-follow.2.0.1.js.html">jquery.simple-scroll-follow.2.0.1.js</a>, <a href="jquery.simple-scroll-follow.2.0.1.js.html#line83">line 83</a>
+        <a href="jquery.simple-scroll-follow.2.0.2.js.html">jquery.simple-scroll-follow.2.0.2.js</a>, <a href="jquery.simple-scroll-follow.2.0.2.js.html#line83">line 83</a>
     </li></ul></dd>
     
 
@@ -774,20 +1138,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 <div class="param-desc">
     - 追尾要素
 </div>
@@ -806,33 +1170,35 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="setOption"><span class="type-signature"></span>setOption<span class="signature">(self, option)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        オプションを初期化する
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    オプションを初期化する
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -901,10 +1267,19 @@
     
     </tbody>
 </table>
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -926,7 +1301,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="jquery.simple-scroll-follow.2.0.1.js.html">jquery.simple-scroll-follow.2.0.1.js</a>, <a href="jquery.simple-scroll-follow.2.0.1.js.html#line104">line 104</a>
+        <a href="jquery.simple-scroll-follow.2.0.2.js.html">jquery.simple-scroll-follow.2.0.2.js</a>, <a href="jquery.simple-scroll-follow.2.0.2.js.html#line104">line 104</a>
     </li></ul></dd>
     
 
@@ -938,22 +1313,21 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
 
-        </dl>
+
+
+
+
+
+
+
+        
     
 
     
@@ -969,13 +1343,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="SimpleScrollFollow.html">SimpleScrollFollow</a></li></ul><h3>Global</h3><ul><li><a href="global.html#simpleScrollFollow">simpleScrollFollow</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="SimpleScrollFollow.html">SimpleScrollFollow</a></li></ul><h3>Global</h3><ul><li><a href="global.html#simpleScrollFollow">simpleScrollFollow</a></li></ul>
 </nav>
 
-<br clear="both">
+<br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha9</a> on Fri Aug 08 2014 08:19:40 GMT+0000 (UTC)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha13</a> on Tue Mar 10 2015 06:54:03 GMT+0000 (UTC)
 </footer>
 
 <script> prettyPrint(); </script>
