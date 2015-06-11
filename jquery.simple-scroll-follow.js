@@ -1,6 +1,6 @@
 /**
  * @file jQuery Plugin: jquery.simple-scroll-follow
- * @version 2.0.2
+ * @version 2.0.3
  * @author Yuusaku Miyazaki [toumin.m7@gmail.com]
  * @license MIT License
  */
