@@ -14,8 +14,8 @@ http://www.usamimi.info/~sutara/sample2/simple-scroll-follow/jsdoc/
 ```html
 <div id="foo">Element to follow</div>
 
-<script src="http://code.jquery.com/jquery.min.js"></script>
-<script src="jquery.simple-scroll-follow.1.0.js"></script>
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="jquery.simple-scroll-follow.js"></script>
 ```
 
 ###### CSS
