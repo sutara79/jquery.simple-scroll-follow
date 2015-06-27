@@ -1,13 +1,8 @@
 # jquery.simple-scroll-follow
 jQuery plugin for following after scrolling window.
 
-
 ## Demo
 http://www.usamimi.info/~sutara/sample2/simple-scroll-follow/
-
-## JSDoc
-http://www.usamimi.info/~sutara/sample2/simple-scroll-follow/jsdoc/
-
 
 ## Usage
 ###### HTML
