@@ -9,7 +9,7 @@
     "url": "https://github.com/sutara79/jquery.simple-scroll-follow.git"
   },
   "dependencies": {
-    "jquery": ">=1.9"
+    "jquery": ">=1.11.1"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
