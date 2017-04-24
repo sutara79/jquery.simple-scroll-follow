@@ -19,7 +19,7 @@ Install
 -----------------------------
 - Clone or download from [GitHub](https://github.com/sutara79/jquery.simple-scroll-follow).
 - npm: `npm i jquery.simple-scroll-follow`
-- CDN: http://www.jsdelivr.com/projects/jquery.simple-scroll-follow
+- [CDN](http://www.jsdelivr.com/projects/jquery.simple-scroll-follow)
 
 
 Usage
@@ -77,7 +77,7 @@ Public Method
 Compatibility
 -----------------------------
 
-- jQuery: 3.2
+- jQuery: >=3.0.0 ([because of XSS vulnerability](https://nodesecurity.io/advisories/jquery_xss))
 - Browser: Chrome58, Firefox52, IE11, Edge14
 
 
@@ -91,4 +91,4 @@ Author
 -----------------------------
 
 [Yuusaku Miyazaki](http://sutara79.hatenablog.com/entry/2014/06/21/185709)
-<toumin.m7@gmail.com>
+( <toumin.m7@gmail.com> )
