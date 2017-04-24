@@ -1,36 +1,36 @@
 @charset "utf-8";
 
 body {
-	margin: 0;
-	padding: 0;
-	background: url(null) fixed;
+  margin: 0;
+  padding: 0;
+  background: url(null) fixed;
 }
 
 header {
-	padding: 16px;
-	background: #bcd;
-	border-bottom: 1px solid #999;
+  padding: 16px;
+  background: #bcd;
+  border-bottom: 1px solid #999;
 }
 
 #contents {
-	position: relative;
+  position: relative;
 }
 
 article {
-	box-sizing: border-box;
-	width: 200px;
-	padding: 16px;
-	background: #bcd;
-	position: static;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 16px;
+  background: #bcd;
+  position: static;
 }
 
 aside {
-	box-sizing: border-box;
-	width: 200px;
-	padding: 16px;
-	background: #fbb;
-	position: absolute;
-	top: 0px;
-	left: 200px;
-	border: 2px solid #f77;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 16px;
+  background: #fbb;
+  position: absolute;
+  top: 0px;
+  left: 200px;
+  border: 2px solid #f77;
 }

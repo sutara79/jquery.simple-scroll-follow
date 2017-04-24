@@ -1,130 +1,130 @@
 @charset "utf-8";
 
 body {
-	margin: 0;
-	padding: 0;
-	background: url(null) fixed;
+  margin: 0;
+  padding: 0;
+  background: url(null) fixed;
 }
 
 header {
-	padding: 16px;
-	background: #bcd;
-	border-bottom: 1px solid #999;
+  padding: 16px;
+  background: #bcd;
+  border-bottom: 1px solid #999;
 }
 
 #wrap_contents {
-	position: relative;
+  position: relative;
 }
 
 #contents {
-	position: relative;
-	margin: auto;
+  position: relative;
+  margin: auto;
 }
 
 /* for PC */
 @media screen and (min-width:992px) {
-	#contents {
-		width: 800px;
-	}
+  #contents {
+    width: 800px;
+  }
 
-	#isolated {
-		box-sizing: border-box;
-		position: absolute;
-		width: 200px;
-		margin: 0;
-		top: 0px;
-		right: 0px;
-		padding: 24px;
-		background: #fbb;
-		border: 2px solid #f77;
-		border-radius: 4px;
-	}
+  #isolated {
+    box-sizing: border-box;
+    position: absolute;
+    width: 200px;
+    margin: 0;
+    top: 0px;
+    right: 0px;
+    padding: 24px;
+    background: #fbb;
+    border: 2px solid #f77;
+    border-radius: 4px;
+  }
 
-	article {
-		box-sizing: border-box;
-		width: 600px;
-		padding: 16px;
-		background: #bcd;
-		position: relative;
-		left: 200px;
-	}
+  article {
+    box-sizing: border-box;
+    width: 600px;
+    padding: 16px;
+    background: #bcd;
+    position: relative;
+    left: 200px;
+  }
 
-	#right {
-		box-sizing: border-box;
-		width: 200px;
-		padding: 16px;
-		background: #fbb;
-		position: absolute;
-		top: 0px;
-		left: 600px;
-		border: 2px solid #f77;
-	}
+  #right {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 16px;
+    background: #fbb;
+    position: absolute;
+    top: 0px;
+    left: 600px;
+    border: 2px solid #f77;
+  }
 
-	#left {
-		box-sizing: border-box;
-		width: 200px;
-		padding: 16px;
-		background: #fbb;
-		position: absolute;
-		top: 0px;
-		border: 2px solid #f77;
-	}
+  #left {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 16px;
+    background: #fbb;
+    position: absolute;
+    top: 0px;
+    border: 2px solid #f77;
+  }
 }
 
 /* for Smart Phone */
 @media screen and (max-width:991px) {
-	#contents {
-		width: 600px;
-	}
+  #contents {
+    width: 600px;
+  }
 
-	#isolated {
-		box-sizing: border-box;
-		position: static;
-		width: 600px;
-		margin: auto;
-		top: auto;
-		right: auto;
-		padding: 24px;
-		background: #fbb;
-		border: 2px solid #f77;
-		border-radius: 0px;
-	}
+  #isolated {
+    box-sizing: border-box;
+    position: static;
+    width: 600px;
+    margin: auto;
+    top: auto;
+    right: auto;
+    padding: 24px;
+    background: #fbb;
+    border: 2px solid #f77;
+    border-radius: 0px;
+  }
 
-	article {
-		box-sizing: border-box;
-		width: 600px;
-		padding: 16px;
-		background: #bcd;
-		position: static;
-		left: auto;
-	}
+  article {
+    box-sizing: border-box;
+    width: 600px;
+    padding: 16px;
+    background: #bcd;
+    position: static;
+    left: auto;
+  }
 
-	#right {
-		box-sizing: border-box;
-		width: 600px;
-		padding: 16px;
-		background: #fbb;
-		position: static;
-		top: auto;
-		left: auto;
-		border: 2px solid #f77;
-	}
+  #right {
+    box-sizing: border-box;
+    width: 600px;
+    padding: 16px;
+    background: #fbb;
+    position: static;
+    top: auto;
+    left: auto;
+    border: 2px solid #f77;
+  }
 
-	#left {
-		box-sizing: border-box;
-		width: 600px;
-		padding: 16px;
-		background: #fbb;
-		position: static;
-		top: auto;
-		border: 2px solid #f77;
-	}
+  #left {
+    box-sizing: border-box;
+    width: 600px;
+    padding: 16px;
+    background: #fbb;
+    position: static;
+    top: auto;
+    border: 2px solid #f77;
+  }
 }
 
 footer {
-	clear: both;
-	padding: 16px;
-	border-top: 1px solid #999;
-	background: #bcd;
-	position: relative; /** 追尾要素よりも全面に表示させるために必要 */
+  clear: both;
+  padding: 16px;
+  border-top: 1px solid #999;
+  background: #bcd;
+  position: relative; /** 追尾要素よりも全面に表示させるために必要 */
 }

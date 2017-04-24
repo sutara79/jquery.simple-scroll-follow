@@ -1,96 +1,174 @@
-@charset "utf-8";
-
 body {
-	-webkit-text-size-adjust: 100%;
+  background-color: #eee;
+  -webkit-text-size-adjust: 100%;
 }
 
 #contents {
-	position: relative;
+  position: relative;
 }
 
 /* for PC */
 @media screen and (min-width:992px) {
-	nav {
-		position: absolute;
-		box-sizing: border-box;
-		padding: 0 15px;
-		width: 34%;
-		top: 0px;
-		left: auto;
-		right: auto;
-		bottom: auto;
-	}
+  nav {
+    bottom: auto;
+    box-sizing: border-box;
+    left: auto;
+    padding: 0 15px;
+    position: absolute;
+    right: auto;
+    top: 0;
+    width: 34%;
+  }
 
-	article {
-		position: relative;
-		box-sizing: border-box;
-		padding: 0 15px;
-		width: 66%;
-		top: 0px;
-		left: 34%;
-		right: auto;
-		bottom: auto;
-	}
+  article {
+    bottom: auto;
+    box-sizing: border-box;
+    left: 34%;
+    padding: 0 15px;
+    position: relative;
+    right: auto;
+    top: 0;
+    width: 66%;
+  }
 }
 
 /* for Smart Phone */
 @media screen and (max-width:991px) {
-	nav {
-		position: static;
-		box-sizing: border-box;
-		padding: 0 15px;
-		width: 100%;
-		top: auto;
-		left: auto;
-		right: auto;
-		bottom: auto;
-	}
+  nav {
+    bottom: auto;
+    box-sizing: border-box;
+    left: auto;
+    padding: 0 15px;
+    position: static;
+    right: auto;
+    top: auto;
+    width: 100%;
+  }
 
-	article {
-		position: static;
-		box-sizing: border-box;
-		padding: 0 15px;
-		width: 100%;
-		top: auto;
-		left: auto;
-		right: auto;
-		bottom: auto;
-	}
+  article {
+    bottom: auto;
+    box-sizing: border-box;
+    left: auto;
+    padding: 0 15px;
+    position: static;
+    right: auto;
+    top: auto;
+    width: 100%;
+  }
 }
 
 footer {
-	background: #eee;
+  background: #eee;
 }
 
 footer div {
-	padding: 16px 0px;
-	text-align: right;
+  padding: 16px 0;
+  text-align: right;
 }
 
 h6 {
-	color: #777;
-	font-size: 14px;
+  color: #777;
+  font-size: 14px;
 }
 
 #list4 th:nth-child(3) {
-	min-width: 120px;
+  min-width: 120px;
 }
 
 pre {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 article form a.btn,
 article form input,
 article form button {
-	margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
-.green { color: #5cb85c;}
-.red { color: #d9534f;}
+.green {
+  color: #5cb85c;
+}
+.red {
+  color: #d9534f;
+}
 
 #jump_to_top {
-	position: fixed;
-	right: 16px;
-	top: 16px;
+  bottom: 16px;
+  position: fixed;
+  right: 16px;
+}
+#jump_to_top a,
+#jump_to_top a:hover {
+  color: #aa9;
+  font-size: 2.5em;
+  text-decoration: none;
+}
+
+/**
+ * Override Bootstrap3
+ */
+.jumbotron {
+  background-color: #486;
+  background-image: linear-gradient(30deg, #3d8260 12%, transparent 12.5%, transparent 87%, #3d8260 87.5%, #3d8260),
+  linear-gradient(150deg, #3d8260 12%, transparent 12.5%, transparent 87%, #3d8260 87.5%, #3d8260),
+  linear-gradient(30deg, #3d8260 12%, transparent 12.5%, transparent 87%, #3d8260 87.5%, #3d8260),
+  linear-gradient(150deg, #3d8260 12%, transparent 12.5%, transparent 87%, #3d8260 87.5%, #3d8260),
+  linear-gradient(60deg, #4a8e6c 25%, transparent 25.5%, transparent 75%, #4a8e6c 75%, #4a8e6c),
+  linear-gradient(60deg, #4a8e6c 25%, transparent 25.5%, transparent 75%, #4a8e6c 75%, #4a8e6c);
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  background-size: 80px 140px;
+  box-shadow: 0 1px 2px #666;
+  color: #fff;
+  text-shadow: 0 1px 1px #333;
+}
+.page-title {
+  font-family: Arial;
+}
+.jumbotron-link,
+.jumbotron-link:hover {
+  color: inherit;
+}
+.list-group-item:first-child {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.list-group-item:last-child {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.panel {
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px #aaa;
+}
+.panel-primary > .panel-heading {
+  background-color: #776;
+  border-color: #776;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.btn-primary {
+  background-color: #597;
+  border-color: #509472;
+}
+.btn-primary:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled]:hover {
+  background-color: #486;
+  border-color: #3f8361;
+}
+.btn-primary:active,
+.btn-primary:active:hover,
+.btn-primary:active:focus,
+.btn-primary:focus {
+  background-color: #375;
+  border-color: #2d7250;
+}
+a,
+a:active {
+  color: #486;
+}
+a:hover,
+a:focus {
+  color: #375;
 }

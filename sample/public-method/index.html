@@ -3,34 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>"enabled": jquery.simple-scroll-follow</title>
+    <title>Call public method from outside: jquery.simple-scroll-follow</title>
     <link rel="stylesheet" type="text/css" href="sample.css">
   </head>
   <body>
     <header>
-      <h1>"enabled"</h1>
+      <h1>Call public method from outside</h1>
     </header>
     <div id="contents">
-      <div id="enabled">
-        <h2>enabled</h2>
-        <p>
-          $('div').simpleScrollFollow({<br>
-            enabled: true<br>
-          });
-        </p>
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <p>4</p>
-        <p>5</p>
-      </div>
       <article>
         <h2>article</h2>
         <p>
-          width: 200px;<br>
-          position: static;<br>
+          width: 400px;<br>
+          box-sizing: border-box;<br>
+          position: absolute;<br>
           top: 0px;<br>
-          left: 0px;
+          left: 200px;
         </p>
         <p>1</p>
         <p>2</p>
@@ -73,19 +61,15 @@
         <p>39</p>
         <p>40</p>
       </article>
-      <div id="disabled">
-        <h2>disabled</h2>
+      <aside>
+        <h2>aside</h2>
         <p>
-          $('div').simpleScrollFollow({<br>
-            enabled: false<br>
-          });
+          $('aside').simpleScrollFollow(<br>
+          'setEnabled', true<br>
+          );
         </p>
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <p>4</p>
-        <p>5</p>
-      </div>
+        <a href="javascript:void(0)" id="toggle_scroll">click to disable scroll</a>
+      </aside>
     </div>
 
     <!-- JavaScript -->

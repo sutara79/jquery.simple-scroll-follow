@@ -1,0 +1,25 @@
+{
+  "name": "jquery.simple-scroll-follow",
+  "version": "3.0.0",
+  "license": "MIT",
+  "author": "Yuusaku Miyazaki <toumin.m7@gmail.com>",
+  "homepage": "https://github.com/sutara79/jquery.simple-scroll-follow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sutara79/jquery.simple-scroll-follow.git"
+  },
+  "dependencies": {
+    "jquery": ">=1.9"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-coveralls": "^1.0.1",
+    "grunt-qunit-istanbul": "^0.6.0"
+  },
+  "scripts": {
+    "test": "grunt qunit",
+    "uglify": "grunt uglify",
+    "coveralls": "grunt coveralls"
+  }
+}
