@@ -1,6 +1,7 @@
 body {
   background-color: #eee;
   -webkit-text-size-adjust: 100%;
+  font-size: 15px;
 }
 
 #contents {
@@ -76,7 +77,7 @@ h6 {
 }
 
 pre {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 article form a.btn,
@@ -102,6 +103,9 @@ article form button {
   color: #aa9;
   font-size: 2.5em;
   text-decoration: none;
+}
+.btn-container {
+  margin-bottom: 1.2em;
 }
 
 /**
@@ -136,14 +140,15 @@ article form button {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.panel {
+.panel-primary {
   border: 0;
   border-radius: 2px;
   box-shadow: 0 1px 2px #aaa;
+  margin-bottom: 30px;
 }
 .panel-primary > .panel-heading {
-  background-color: #776;
-  border-color: #776;
+  background-color: #777;
+  border-color: #777;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }

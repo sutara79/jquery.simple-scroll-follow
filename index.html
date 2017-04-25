@@ -79,9 +79,11 @@
               </h3>
             </div>
             <div class="panel-body">
-              <a class="btn btn-primary" href="sample/basic/" target="_blank">
-                Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
-              </a>
+              <div class="btn-container">
+                <a class="btn btn-primary" href="sample/basic/" target="_blank">
+                  Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                </a>
+              </div>
               <h6>HTML</h6>
 <pre>
 &lt;aside&gt;Element to follow&lt;/aside&gt;
@@ -145,9 +147,11 @@ body {
               </h3>
             </div>
             <div class="panel-body">
-              <a class="btn btn-primary" href="sample/limit_elem/" target="_blank">
-                Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
-              </a>
+              <div class="btn-container">
+                <a class="btn btn-primary" href="sample/limit_elem/" target="_blank">
+                  Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                </a>
+              </div>
               <h6>HTML</h6>
 <pre>
 &lt;div&gt;
@@ -178,9 +182,11 @@ $('aside').simpleScrollFollow({
               </h3>
             </div>
             <div class="panel-body">
-              <a class="btn btn-primary" href="sample/min_width/" target="_blank">
-                Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
-              </a>
+              <div class="btn-container">
+                <a class="btn btn-primary" href="sample/min_width/" target="_blank">
+                  Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                </a>
+              </div>
               <h6>CSS</h6>
 <pre>
 /* for PC */
@@ -220,9 +226,11 @@ $('aside').simpleScrollFollow({
               </h3>
             </div>
             <div class="panel-body">
-              <a class="btn btn-primary" href="sample/enabled/" target="_blank">
-                Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
-              </a>
+              <div class="btn-container">
+                <a class="btn btn-primary" href="sample/enabled/" target="_blank">
+                  Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                </a>
+              </div>
               <h6>JavaScript</h6>
 <pre>
 $('#enabled').simpleScrollFollow({
@@ -243,9 +251,11 @@ $('#disabled').simpleScrollFollow({
               </h3>
             </div>
             <div class="panel-body">
-              <a class="btn btn-primary" href="sample/public-method/" target="_blank">
-                Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
-              </a>
+              <div class="btn-container">
+                <a class="btn btn-primary" href="sample/public-method/" target="_blank">
+                  Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                </a>
+              </div>
               <p>Since: v3.0.0</p>
               <p class="lang_en">
                 Set the method name to the first argument.<br>
@@ -257,9 +267,10 @@ $('#disabled').simpleScrollFollow({
               </p>
               <h6>JavaScript</h6>
 <pre>
+// apply plugin firstly
 $('aside').simpleScrollFollow();
 
-$('aside #toggle_scroll').click(function() {
+$('#toggle_scroll').click(function() {
   if ($(this).text() == 'click to disable scroll') {
     $('aside')<span class="green">.simpleScrollFollow(<span class="red">'setEnabled'</span>, <span class="red">false</span>)</span>;
     $(this).text('click to enable scroll');
@@ -280,9 +291,11 @@ $('aside #toggle_scroll').click(function() {
               </h3>
             </div>
             <div class="panel-body">
-              <a class="btn btn-primary" href="sample/complex/" target="_blank">
-                Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
-              </a>
+              <div class="btn-container">
+                <a class="btn btn-primary" href="sample/complex/" target="_blank">
+                  Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                </a>
+              </div>
               <p class="lang_en">
                 This plugin is also used in current page.
               </p>
