@@ -109,6 +109,23 @@ article form button {
 }
 
 /**
+ * 見出し横に表示される、自身へのリンク
+ */
+.js-anchor {
+  font-size: 14px;
+  visibility: hidden;
+  margin-left: -14px;
+}
+.panel-heading:hover .js-anchor {
+  visibility: visible;
+}
+.js-anchor,
+.js-anchor:hover,
+.js-anchor:active {
+  color: inherit;
+}
+
+/**
  * Override Bootstrap3
  */
 .jumbotron {
