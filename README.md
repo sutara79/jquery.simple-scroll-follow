@@ -59,6 +59,8 @@ $('#foo').simpleScrollFollow();
 |[limit_elem](http://sutara79.github.io/jquery.simple-scroll-follow/#limit_elem)|Object, string|`$('body')`|Lower limit of target element.|
 |[min_width](http://sutara79.github.io/jquery.simple-scroll-follow/#min_width)|number|`0`|When windows width is less narrow than this, this plugin stops.|
 |[enabled](http://sutara79.github.io/jquery.simple-scroll-follow/#enabled)|boolean|`true`|If it is `false`, this plugin stops.|
+|[upper_side](http://sutara79.github.io/jquery.simple-scroll-follow/#fixed-elem)|string|`null`|Upper side of target element.|
+|[lower_side](http://sutara79.github.io/jquery.simple-scroll-follow/#fixed-elem)|string|`null`|Lower side of target element.|
 
 
 ## Public Method

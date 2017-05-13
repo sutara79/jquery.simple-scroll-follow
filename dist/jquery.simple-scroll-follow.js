@@ -1,6 +1,6 @@
 /**
  * @file jQuery Plugin: jquery.simple-scroll-follow
- * @version 3.0.1
+ * @version 3.1.0
  * @author Yuusaku Miyazaki <toumin.m7@gmail.com>
  * @license MIT License
  */
@@ -146,7 +146,9 @@ $.extend($.simpleScrollFollow.prototype, /** @lends external:jQuery.simpleScroll
     this.option = $.extend({
       enabled: true,
       limit_elem: $('body'),
-      min_width: 0
+      min_width: 0,
+      upper_side: null,
+      lower_side: null
     }, option);
     if (typeof this.option.limit_elem == 'string') {
       this.option.limit_elem = $(this.option.limit_elem);
@@ -161,8 +163,16 @@ $.extend($.simpleScrollFollow.prototype, /** @lends external:jQuery.simpleScroll
    * @return {number} - 算出されたoffset_bottom
    */
   _calcOffsetBottom: function(elem) {
-    return $(elem).offset().top +
-           $(elem).height() +
+    return $(elem).offset().top + this._calcElemHeight(elem);
+  },
+
+  /**
+   * @private
+   * @arg {Object} elem - Target element to calc height
+   * @return {number} - the height which includes border-width and padding
+   */
+  _calcElemHeight: function(elem) {
+    return $(elem).height() +
            Number($(elem).css('border-top-width'   ).replace(/px$/, '')) +
            Number($(elem).css('border-bottom-width').replace(/px$/, '')) +
            Number($(elem).css('padding-top'        ).replace(/px$/, '')) +
@@ -188,8 +198,8 @@ $.extend($.simpleScrollFollow.prototype, /** @lends external:jQuery.simpleScroll
 
     // 画面の上端、下端を取得
     var win = {
-      scroll_top: $(window).scrollTop(),
-      scroll_bottom: $(window).scrollTop() + $(window).height()
+      scroll_top: this._getUpperSide(),
+      scroll_bottom: this._getLowerSide()
     };
 
     // 追尾要素の "現在の" 上端、下端を取得
@@ -207,6 +217,36 @@ $.extend($.simpleScrollFollow.prototype, /** @lends external:jQuery.simpleScroll
     }
     this._handleScrollMain(win, current, limit);
     return true;
+  },
+
+  /**
+   * @private
+   * @returns {number} Upper side of window
+   */
+  _getUpperSide: function() {
+    var winScrollTop = $(window).scrollTop();
+    if (this.option.upper_side) {
+      var upperLimitBottom = this._calcOffsetBottom(this.option.upper_side);
+      if (winScrollTop < upperLimitBottom) {
+        winScrollTop = upperLimitBottom;
+      }
+    }
+    return winScrollTop;
+  },
+
+  /**
+   * @private
+   * @returns {number} Lower side of window
+   */
+  _getLowerSide: function() {
+    var winScrollBottom = $(window).scrollTop() + $(window).height();
+    if (this.option.lower_side) {
+      var lowerLimitTop = $(this.option.lower_side).offset().top;
+      if (winScrollBottom > lowerLimitTop) {
+        winScrollBottom = lowerLimitTop;
+      }
+    }
+    return winScrollBottom;
   },
 
   /**
@@ -311,7 +351,7 @@ $.extend($.simpleScrollFollow.prototype, /** @lends external:jQuery.simpleScroll
     $(this.follow.elem)
       .css({
         position: 'fixed',
-        top: 0,
+        top: this._getPositionToStickToWindow(this.option.upper_side),
         bottom: 'auto',
         left: this.follow.offset_left,
         right: 'auto'
@@ -328,11 +368,24 @@ $.extend($.simpleScrollFollow.prototype, /** @lends external:jQuery.simpleScroll
       .css({
         position: 'fixed',
         top: 'auto',
-        bottom: 0,
+        bottom: this._getPositionToStickToWindow(this.option.lower_side),
         left: this.follow.offset_left,
         right: 'auto'
       })
       .width(this.follow.width);
+  },
+
+  /**
+   * @private
+   * @arg {object} limit - this.option.upper_side or this.option.lower_side
+   * @returns {number} position-top/bottom to stick to window
+   */
+  _getPositionToStickToWindow: function(limit) {
+    if (limit) {
+      return this._calcElemHeight(limit);
+    } else {
+      return 0;
+    }
   },
 
   /**

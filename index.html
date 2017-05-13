@@ -60,6 +60,10 @@
               <span class="lang_en">"enabled" for disabling this plugin by default</span>
               <span class="lang_ja">"enabled"で追尾の有効・無効を設定する</span>
             </a>
+            <a class="list-group-item" href="#fixed-elem">
+              <span class="lang_en">Fixed element</span>
+              <span class="lang_ja">固定要素に隠れないようにする</span>
+            </a>
             <a class="list-group-item" href="#public-method">
               <span class="lang_en">Call public method from outside</span>
               <span class="lang_ja">パブリックメソッドを外部から実行する</span>
@@ -231,13 +235,41 @@ $('aside').simpleScrollFollow({
                   Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
                 </a>
               </div>
-              <h6>JavaScript</h6>
 <pre>
 $('#enabled').simpleScrollFollow({
   <span class="green">enabled</span>: <span class="red">true</span>
 });
 $('#disabled').simpleScrollFollow({
   <span class="green">enabled</span>: <span class="red">false</span>
+});
+</pre>
+            </div>
+          </section>
+
+          <section id="fixed-elem" class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <span class="lang_en">Fixed element</span>
+                <span class="lang_ja">固定要素に隠れないようにする</span>
+              </h3>
+            </div>
+            <div class="panel-body">
+              <div class="btn-container">
+                <a class="btn btn-primary" href="sample/fixed-elem/" target="_blank">
+                  Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                </a>
+              </div>
+              <p>Since: v3.1.0</p>
+              <p class="lang_en">
+                If you use fixed menu such as <a href="http://getbootstrap.com/components/#navbar-fixed-top" target="_blank">Bootstrap .navbar-fixed-top</a>, the options below will help you.
+              </p>
+              <p class="lang_ja">
+                <a href="http://getbootstrap.com/components/#navbar-fixed-top" target="_blank">Bootstrap .navbar-fixed-top</a>のような固定メニューに隠れないようにするため、下記のオプションを指定してください。
+              </p>
+<pre>
+$('aside').simpleScrollFollow({
+  <span class="green">upper_side</span>: '#menu-fixed-top',
+  <span class="green">lower_side</span>: '#menu-fixed-bottom'
 });
 </pre>
             </div>
@@ -265,7 +297,6 @@ $('#disabled').simpleScrollFollow({
                 第1引数にメソッド名を文字列で指定します。<br>
                 第2引数以降はそのメソッドの引数になります。
               </p>
-              <h6>JavaScript</h6>
 <pre>
 // apply plugin firstly
 $('aside').simpleScrollFollow();

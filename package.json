@@ -1,7 +1,7 @@
 {
   "name": "jquery.simple-scroll-follow",
   "description": "jQuery plugin to move the element according to the scrolling window.",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "license": "MIT",
   "author": "Yuusaku Miyazaki <toumin.m7@gmail.com>",
   "homepage": "https://github.com/sutara79/jquery.simple-scroll-follow",

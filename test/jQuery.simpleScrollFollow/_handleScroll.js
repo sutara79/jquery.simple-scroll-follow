@@ -16,20 +16,20 @@ jQuery(document).ready(function($) {
     }
   });
 
-  test('() option.enabled = false', 1, function() {
+  test('should be false when option.enabled = false', 1, function() {
     this.obj.option.enabled = false;
     strictEqual(this.obj._handleScroll(), false);
   });
 
-  test('() option.min_width = 1000', 1, function() {
+  test('should be false when option.min_width = 8000', 1, function() {
     // node_modules/phantomjs/lib/phantom/examples/colorwheel.coffee
     // node_modules/phantomjs/lib/phantom/examples/colorwheel.js
     //     viewportSize = { width: 400, height : 400 }
-    this.obj.option.min_width = 1000;
+    this.obj.option.min_width = 8000;
     strictEqual(this.obj._handleScroll(), false);
   });
 
-  test('()', 1, function() {
+  test('should be true when no options', 1, function() {
     strictEqual(this.obj._handleScroll(), true);
   });
 

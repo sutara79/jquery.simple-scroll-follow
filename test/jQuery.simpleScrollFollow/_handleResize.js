@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
     setup: function() {
       $('<div id="target">').appendTo('body');
       this.target = $('#target');
-      this.obj = new $.simpleScrollFollow(target);
+      this.obj = new $.simpleScrollFollow(this.target);
     },
     teardown: function() {
       this.target.remove();
