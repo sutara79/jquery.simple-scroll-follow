@@ -16,15 +16,8 @@ https://sutara79.github.io/jquery.simple-scroll-follow/
 ## Install
 - [GitHub](https://github.com/sutara79/jquery.simple-scroll-follow): Clone or download.
 - [npm](https://www.npmjs.com/package/jquery.simple-scroll-follow): `npm i jquery.simple-scroll-follow`
-- [CDN (jsDelivr)](http://www.jsdelivr.com/projects/jquery.simple-scroll-follow):
-    ```javascript
-    <script src="https://cdn.jsdelivr.net/jquery.simple-scroll-follow/3.0.0/jquery.simple-scroll-follow.min.js"></script>
-    ```
-  You can load jQuery and this plugin with single HTTP request.  
-  See [jsDelivr's document](https://github.com/jsdelivr/jsdelivr#load-multiple-files-with-single-http-request)
-    ```javascript
-    <script src="https://cdn.jsdelivr.net/g/jquery@3.2.1,jquery.simple-scroll-follow@3.0.0"></script>
-    ```
+- CDN ([jsDelivr](https://github.com/jsdelivr/jsdelivr#usage)):
+    - jquery.simple-scroll-follow.min.js: [v3.1.0](https://cdn.jsdelivr.net/npm/jquery.simple-scroll-follow@3.1.0/dist/jquery.simple-scroll-follow.min.js)
 
 
 ## Usage
