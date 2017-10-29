@@ -1,5 +1,6 @@
 # jquery.simple-scroll-follow
 
+[![npm version](https://img.shields.io/npm/v/jquery.simple-scroll-follow.svg)](https://www.npmjs.com/package/jquery.simple-scroll-follow)
 [![Build Status](https://travis-ci.org/sutara79/jquery.simple-scroll-follow.svg?branch=master)](https://travis-ci.org/sutara79/jquery.simple-scroll-follow)
 [![Coverage Status](https://coveralls.io/repos/github/sutara79/jquery.simple-scroll-follow/badge.svg?branch=master)](https://coveralls.io/github/sutara79/jquery.simple-scroll-follow?branch=master)
 [![dependencies Status](https://david-dm.org/sutara79/jquery.simple-scroll-follow/status.svg)](https://david-dm.org/sutara79/jquery.simple-scroll-follow)
