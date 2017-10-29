@@ -17,7 +17,7 @@ https://sutara79.github.io/jquery.simple-scroll-follow/
 - [GitHub](https://github.com/sutara79/jquery.simple-scroll-follow): Clone or download.
 - [npm](https://www.npmjs.com/package/jquery.simple-scroll-follow): `npm i jquery.simple-scroll-follow`
 - CDN ([jsDelivr](https://github.com/jsdelivr/jsdelivr#usage)):
-    - jquery.simple-scroll-follow.min.js: [v3.1.0](https://cdn.jsdelivr.net/npm/jquery.simple-scroll-follow@3.1.0/dist/jquery.simple-scroll-follow.min.js)
+    - jquery.simple-scroll-follow.min.js: [v3.1.1](https://cdn.jsdelivr.net/npm/jquery.simple-scroll-follow@3.1.1/dist/jquery.simple-scroll-follow.min.js)
 
 
 ## Usage

@@ -1,7 +1,7 @@
 {
   "name": "jquery.simple-scroll-follow",
   "description": "jQuery plugin to move the element according to the scrolling window.",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "license": "MIT",
   "author": "Yuusaku Miyazaki <toumin.m7@gmail.com>",
   "homepage": "https://github.com/sutara79/jquery.simple-scroll-follow",
@@ -15,14 +15,14 @@
     "scroll"
   ],
   "dependencies": {
-    "jquery": ">=3.0.0"
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-uglify": "^3.1.0",
     "grunt-coveralls": "^1.0.1",
     "grunt-qunit-istanbul": "^0.6.0",
-    "package-json-validator": "^0.6.1"
+    "package-json-validator": "^0.6.2"
   },
   "scripts": {
     "test": "grunt qunit",
