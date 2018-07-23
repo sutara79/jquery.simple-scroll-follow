@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Test</title>
+<link rel="stylesheet" href="../../node_modules/mocha/mocha.css">
+</head>
+<body>
+<div id="mocha"></div>
+
+<!-- Mocha, power-assert, jQuery -->
+<script src="../../node_modules/mocha/mocha.js"></script>
+<script src="../../node_modules/power-assert/build/power-assert.js"></script>
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+
+<script>
+mocha.setup('bdd');
+mocha.reporter('html');
+</script>
+
+<!-- target for testing -->
+<script src="../../dist/jquery.simple-scroll-follow.min.js"></script>
+
+<!-- test script -->
+<script src="jQuery.fn/simpleScrollFollow.js"></script>
+<script src="jQuery.fn/simpleScrollFollow.processEach.js"></script>
+<script src="jQuery.simpleScrollFollow/setEnabled.js"></script>
+<script src="jQuery.simpleScrollFollow/setFollow.js"></script>
+<script src="jQuery.simpleScrollFollow/setOption.js"></script>
+<script src="jQuery.simpleScrollFollow/calcOffsetBottom.js"></script>
+<script src="jQuery.simpleScrollFollow/calcElemHeight.js"></script>
+<script src="jQuery.simpleScrollFollow/handleScroll.js"></script>
+<script src="jQuery.simpleScrollFollow/getUpperSide.js"></script>
+<script src="jQuery.simpleScrollFollow/getLowerSide.js"></script>
+<script src="jQuery.simpleScrollFollow/handleScrollMain.js"></script>
+<script src="jQuery.simpleScrollFollow/getPositionToStickToWindow.js"></script>
+<script src="jQuery.simpleScrollFollow/handleResize.js"></script>
+
+<script>
+mocha.run(function (err) {
+  $('<div id="done">').appendTo('body');
+});
+</script>
+</body>
+</html>

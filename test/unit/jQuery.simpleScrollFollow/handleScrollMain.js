@@ -1,26 +1,25 @@
 /**
- * @file Unit Testing by QUnit 1.x -- $.simpleScrollFollow._handleScrollMain()
+ * @file Unit Testing
  */
-jQuery(document).ready(function($) {
-
-  module('$.simpleScrollFollow._handleScrollMain', {
-    setup: function() {
-      $('<div id="target">').css({
+describe('$.simpleScrollFollow._handleScrollMain', () => {
+  let target, obj;
+  beforeEach(() => {
+    target = $('<div id="target">')
+      .css({
         'position': 'absolute',
         'top': 20
-      }).appendTo('body');
-      this.target = $('#target');
-      this.obj = new $.simpleScrollFollow(target);
-    },
-    teardown: function() {
-      this.target.remove();
-      delete this.obj;
-      $(window).off('scroll resize');
-    }
+      })
+      .appendTo('body');
+    obj = new $.simpleScrollFollow(target);
+  });
+  afterEach(() => {
+    target.remove();
+    obj = null;
+    $(window).off('scroll resize');
   });
 
-  test('return 1', 1, function() {
-    var returns = this.obj._handleScrollMain(
+  it('should return 1', () => {
+    const res = obj._handleScrollMain(
       { // win
         scroll_top: 10,
         scroll_bottom: 0
@@ -33,11 +32,11 @@ jQuery(document).ready(function($) {
         offset_bottom: 0
       }
     );
-    strictEqual(returns, 1);
+    assert.equal(res, 1);
   });
 
-  test('return 2', 1, function() {
-    var returns = this.obj._handleScrollMain(
+  it('should return 2', () => {
+    const res = obj._handleScrollMain(
       { // win
         scroll_top: 1100,
         scroll_bottom: 0
@@ -50,11 +49,11 @@ jQuery(document).ready(function($) {
         offset_bottom: 10
       }
     );
-    strictEqual(returns, 2);
+    assert.equal(res, 2);
   });
 
-  test('return 3', 1, function() {
-    var returns = this.obj._handleScrollMain(
+  it('should return 3', () => {
+    const res = obj._handleScrollMain(
       { // win
         scroll_top: 1100,
         scroll_bottom: 1200
@@ -67,11 +66,11 @@ jQuery(document).ready(function($) {
         offset_bottom: 1110
       }
     );
-    strictEqual(returns, 3);
+    assert.equal(res, 3);
   });
 
-  test('return 4', 1, function() {
-    var returns = this.obj._handleScrollMain(
+  it('should return 4', () => {
+    const res = obj._handleScrollMain(
       { // win
         scroll_top: 1100,
         scroll_bottom: 1200
@@ -84,11 +83,11 @@ jQuery(document).ready(function($) {
         offset_bottom: 1200
       }
     );
-    strictEqual(returns, 4);
+    assert.equal(res, 4);
   });
 
-  test('return 5', 1, function() {
-    var returns = this.obj._handleScrollMain(
+  it('should return 5', () => {
+    const res = obj._handleScrollMain(
       { // win
         scroll_top: 1100,
         scroll_bottom: 1110
@@ -101,11 +100,11 @@ jQuery(document).ready(function($) {
         offset_bottom: 1105
       }
     );
-    strictEqual(returns, 5);
+    assert.equal(res, 5);
   });
 
-  test('return 6', 1, function() {
-    var returns = this.obj._handleScrollMain(
+  it('should return 6', () => {
+    const res = obj._handleScrollMain(
       { // win
         scroll_top: 1100,
         scroll_bottom: 1110
@@ -118,12 +117,11 @@ jQuery(document).ready(function($) {
         offset_bottom: 1110
       }
     );
-    strictEqual(returns, 6);
+    assert.equal(res, 6);
   });
 
-  test('return 7', 1, function() {
-    console.log(this.obj.follow.offset_top);
-    var returns = this.obj._handleScrollMain(
+  it('should return 7', () => {
+    const res = obj._handleScrollMain(
       { // win
         scroll_top: 1100,
         scroll_bottom: 1110
@@ -136,7 +134,6 @@ jQuery(document).ready(function($) {
         offset_bottom: 2000
       }
     );
-    strictEqual(returns, 7);
+    assert.equal(res, 7);
   });
-
 });

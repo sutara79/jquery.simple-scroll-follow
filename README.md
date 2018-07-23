@@ -2,8 +2,6 @@
 
 [![npm version](https://img.shields.io/npm/v/jquery.simple-scroll-follow.svg)](https://www.npmjs.com/package/jquery.simple-scroll-follow)
 [![Build Status](https://travis-ci.org/sutara79/jquery.simple-scroll-follow.svg?branch=master)](https://travis-ci.org/sutara79/jquery.simple-scroll-follow)
-[![Coverage Status](https://coveralls.io/repos/github/sutara79/jquery.simple-scroll-follow/badge.svg?branch=master)](https://coveralls.io/github/sutara79/jquery.simple-scroll-follow?branch=master)
-[![dependencies Status](https://david-dm.org/sutara79/jquery.simple-scroll-follow/status.svg)](https://david-dm.org/sutara79/jquery.simple-scroll-follow)
 
 jQuery plugin to move the element according to the scrolling window.
 
@@ -18,7 +16,7 @@ https://sutara79.github.io/jquery.simple-scroll-follow/
 - [GitHub](https://github.com/sutara79/jquery.simple-scroll-follow): Clone or download.
 - [npm](https://www.npmjs.com/package/jquery.simple-scroll-follow): `npm i jquery.simple-scroll-follow`
 - CDN ([jsDelivr](https://github.com/jsdelivr/jsdelivr#usage)):
-    - jquery.simple-scroll-follow.min.js: [v3.1.1](https://cdn.jsdelivr.net/npm/jquery.simple-scroll-follow@3.1.1/dist/jquery.simple-scroll-follow.min.js)
+    - jquery.simple-scroll-follow.min.js: [v3.1.2](https://cdn.jsdelivr.net/npm/jquery.simple-scroll-follow@3.1.2/dist/jquery.simple-scroll-follow.min.js)
 
 
 ## Usage
@@ -26,7 +24,7 @@ https://sutara79.github.io/jquery.simple-scroll-follow/
 ```html
 <div id="foo">Element to follow</div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="jquery.simple-scroll-follow.min.js"></script>
 ```
 
@@ -68,11 +66,6 @@ $('#foo').simpleScrollFollow();
 |No.|type|default|description|
 |--|--|--|--|
 |1|boolean|`true`|`true`: this plugin resumes.<br>`false`: this plugin stops.|
-
-
-## Compatibility
-- jQuery: >=3.0.0 ([because of XSS vulnerability](https://nodesecurity.io/advisories/jquery_xss))
-- Browser: Chrome58, Firefox52, IE11, Edge14
 
 
 ## License
