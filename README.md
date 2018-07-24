@@ -48,17 +48,17 @@ $('#foo').simpleScrollFollow();
 ## Option
 |name|type|default|description|
 |--|--|--|--|
-|[limit_elem](http://sutara79.github.io/jquery.simple-scroll-follow/#limit_elem)|Object, string|`$('body')`|Lower limit of target element.|
-|[min_width](http://sutara79.github.io/jquery.simple-scroll-follow/#min_width)|number|`0`|When windows width is less narrow than this, this plugin stops.|
-|[enabled](http://sutara79.github.io/jquery.simple-scroll-follow/#enabled)|boolean|`true`|If it is `false`, this plugin stops.|
-|[upper_side](http://sutara79.github.io/jquery.simple-scroll-follow/#fixed-elem)|string|`null`|Upper side of target element.|
-|[lower_side](http://sutara79.github.io/jquery.simple-scroll-follow/#fixed-elem)|string|`null`|Lower side of target element.|
+|[limit_elem](http://sutara79.github.io/jquery.simple-scroll-follow/#limit_elem)|Object, string|`$('body')`|An element that indicates lower limit to scroll|
+|[min_width](http://sutara79.github.io/jquery.simple-scroll-follow/#min_width)|number|`0`|Minimum window width to enable this plugin|
+|[enabled](http://sutara79.github.io/jquery.simple-scroll-follow/#enabled)|boolean|`true`|Enable scroll or not|
+|[upper_side](http://sutara79.github.io/jquery.simple-scroll-follow/#fixed-elem)|string|`null`|An fixed element that indicates upper limit to scroll|
+|[lower_side](http://sutara79.github.io/jquery.simple-scroll-follow/#fixed-elem)|string|`null`|An fixed element that indicates lower limit to scroll|
 
 
 ## Public Method
 (since v3.0.0)
 
-- [Detail](http://localhost/gh-pages/jq-plugin/jquery.simple-scroll-follow/#public-method)
+For the details, see [documentation](http://localhost/gh-pages/jq-plugin/jquery.simple-scroll-follow/#public-method).
 
 ### .setEnabled()
 ##### Parameter
