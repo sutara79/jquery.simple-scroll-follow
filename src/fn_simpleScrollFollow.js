@@ -1,5 +1,5 @@
 /**
- * @function external:jQuery.prototype.simpleScrollFollow
+ * @function external:"jQuery.fn".simpleScrollFollow
  * @arg {Object|String} [arg1] - Options or public method
  * @return {Object} jQuery object
  */
@@ -12,7 +12,7 @@ export default function simpleScrollFollow (arg1) {
 }
 
 /**
- * @function external:jQuery.prototype.simpleScrollFollow.processEach
+ * @function external:"jQuery.fn".simpleScrollFollow.processEach
  * @arg {Objectt}       [elem]          - An element
  * @arg {Object|String} [arg1]          - Options or public method
  * @arg {Array}         [subMethodArgs] - Arguments for public method
