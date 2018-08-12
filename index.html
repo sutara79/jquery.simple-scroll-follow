@@ -11,10 +11,10 @@
 <header class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="page-title">jquery.simple-scroll-follow</h1>
-    <p class="lang_en">
+    <p lang="en">
       jQuery plugin to move the element according to the scrolling window.
     </p>
-    <p class="lang_ja">
+    <p lang="ja">
       指定した要素を画面スクロールに追従させます。
     </p>
     <p>
@@ -24,49 +24,49 @@
   </div>
 </header>
 <div class="container">
-  <div id="contents" class="row">
-    <nav id="index" class="col-lg-4 mb-3">
+  <div class="row main">
+    <nav class="col-lg-4 mb-3 toc">
       <div id="js-menu-follow">
-        <div id="language" class="btn-group">
-          <button id="lang_en" class="btn btn-primary">English</button>
-          <button id="lang_ja" class="btn btn-primary">日本語</button>
+        <div class="btn-group">
+          <button id="lang-en" class="btn btn-primary js-btn-lang" type="button" data-lang="en">English</button>
+          <button id="lang-ja" class="btn btn-primary js-btn-lang" type="button" data-lang="ja">日本語</button>
         </div>
         <h5 class="mt-2">
-          <span class="lang_en">Index</span>
-          <span class="lang_ja">目次</span>
+          <span lang="en">Index</span>
+          <span lang="ja">目次</span>
         </h5>
         <div class="list-group">
           <a class="list-group-item list-group-item-action" href="#basic">
-            <span class="lang_en">Basic</span>
-            <span class="lang_ja">基本</span>
+            <span lang="en">Basic</span>
+            <span lang="ja">基本</span>
           </a>
           <a class="list-group-item list-group-item-action" href="#attention">
-            <span class="lang_en">Attention</span>
-            <span class="lang_ja">注意点</span>
+            <span lang="en">Attention</span>
+            <span lang="ja">注意点</span>
           </a>
           <a class="list-group-item list-group-item-action" href="#limit_elem">
-            <span class="lang_en">"limit_elem" for setting bottom limit</span>
-            <span class="lang_ja">"limit_elem"で下限を設定</span>
+            <span lang="en">"limit_elem" for setting bottom limit</span>
+            <span lang="ja">"limit_elem"で下限を設定</span>
           </a>
           <a class="list-group-item list-group-item-action" href="#min_width">
-            <span class="lang_en">"min_width" for responsive design</span>
-            <span class="lang_ja">"min_width"でレスポンシブデザインに対応</span>
+            <span lang="en">"min_width" for responsive design</span>
+            <span lang="ja">"min_width"でレスポンシブデザインに対応</span>
           </a>
           <a class="list-group-item list-group-item-action" href="#enabled">
-            <span class="lang_en">"enabled" for disabling this plugin by default</span>
-            <span class="lang_ja">"enabled"で追尾の有効・無効を設定する</span>
+            <span lang="en">"enabled" for disabling this plugin by default</span>
+            <span lang="ja">"enabled"で追尾の有効・無効を設定する</span>
           </a>
           <a class="list-group-item list-group-item-action" href="#fixed-elem">
-            <span class="lang_en">Fixed element</span>
-            <span class="lang_ja">固定要素に隠れないようにする</span>
+            <span lang="en">Fixed element</span>
+            <span lang="ja">固定要素に隠れないようにする</span>
           </a>
           <a class="list-group-item list-group-item-action" href="#public-method">
-            <span class="lang_en">Call public method from outside</span>
-            <span class="lang_ja">パブリックメソッドを外部から実行する</span>
+            <span lang="en">Call public method from outside</span>
+            <span lang="ja">パブリックメソッドを外部から実行する</span>
           </a>
           <a class="list-group-item list-group-item-action" href="#complex">
-            <span class="lang_en">A more complex example</span>
-            <span class="lang_ja">複雑な使用例</span>
+            <span lang="en">A more complex example</span>
+            <span lang="ja">複雑な使用例</span>
           </a>
         </div>
       </div>
@@ -74,8 +74,8 @@
     <article class="col-lg-8">
       <section id="basic" class="card">
         <h5 class="card-header">
-          <span class="lang_en">Basic</span>
-          <span class="lang_ja">基本</span>
+          <span lang="en">Basic</span>
+          <span lang="ja">基本</span>
         </h5>
         <div class="card-body">
           <div class="btn-container">
@@ -106,24 +106,24 @@ $('aside').simpleScrollFollow();
 
       <section id="attention" class="card">
         <h5 class="card-header">
-          <span class="lang_en">Attention</span>
-          <span class="lang_ja">注意点</span>
+          <span lang="en">Attention</span>
+          <span lang="ja">注意点</span>
         </h5>
         <div class="card-body">
           <ul>
             <li>
-              <p class="lang_en">
+              <p lang="en">
                 <code>position: absolute</code> is required.
               </p>
-              <p class="lang_ja">
+              <p lang="ja">
                 追尾する要素には<code>position: absolute</code>が必須です。
               </p>
             </li>
             <li>
-              <p class="lang_en">
+              <p lang="en">
                 It is not required, but for preventing a screen flickers on Google Chrome, the following is recommended.
               </p>
-              <p class="lang_ja">
+              <p lang="ja">
                 必須ではありませんが、Google Chromeで追尾要素がちらつく現象を防ぐため、下記の設定をお勧めします。
               </p>
               <h6>CSS</h6>
@@ -139,8 +139,8 @@ body {
 
       <section id="limit_elem" class="card">
         <h5 class="card-header">
-          <span class="lang_en">"limit_elem" for setting bottom limit.</span>
-          <span class="lang_ja">"limit_elem"で下限を設定</span>
+          <span lang="en">"limit_elem" for setting bottom limit.</span>
+          <span lang="ja">"limit_elem"で下限を設定</span>
         </h5>
         <div class="card-body">
           <div class="btn-container">
@@ -162,10 +162,10 @@ $('aside').simpleScrollFollow({
   <span class="green">limit_elem</span>: <span class="red">'article'</span>
 });
 </pre>
-          <p class="lang_en">
+          <p lang="en">
             If <code>limit_elem</code> is empty, it will be set to <code>'body'</code>.
           </p>
-          <p class="lang_ja">
+          <p lang="ja">
             <code>limit_elem</code>を指定しない場合は、下限はbody要素の下端となります。
           </p>
         </div>
@@ -173,8 +173,8 @@ $('aside').simpleScrollFollow({
 
       <section id="min_width" class="card">
         <h5 class="card-header">
-          <span class="lang_en">"min_width" for responsive design</span>
-          <span class="lang_ja">"min_width"でレスポンシブデザインに対応</span>
+          <span lang="en">"min_width" for responsive design</span>
+          <span lang="ja">"min_width"でレスポンシブデザインに対応</span>
         </h5>
         <div class="card-body">
           <div class="btn-container">
@@ -216,8 +216,8 @@ $('aside').simpleScrollFollow({
 
       <section id="enabled" class="card">
         <h5 class="card-header">
-          <span class="lang_en">"enabled" for disabling this plugin by default</span>
-          <span class="lang_ja">"enabled"で追尾の有効・無効を設定する</span>
+          <span lang="en">"enabled" for disabling this plugin by default</span>
+          <span lang="ja">"enabled"で追尾の有効・無効を設定する</span>
         </h5>
         <div class="card-body">
           <div class="btn-container">
@@ -239,8 +239,8 @@ $('#disabled').simpleScrollFollow({
 
       <section id="fixed-elem" class="card">
         <h5 class="card-header">
-          <span class="lang_en">Fixed element</span>
-          <span class="lang_ja">固定要素に隠れないようにする</span>
+          <span lang="en">Fixed element</span>
+          <span lang="ja">固定要素に隠れないようにする</span>
         </h5>
         <div class="card-body">
           <div class="btn-container">
@@ -250,10 +250,10 @@ $('#disabled').simpleScrollFollow({
             </a>
           </div>
           <p>Since: v3.1.0</p>
-          <p class="lang_en">
+          <p lang="en">
             If you use fixed menu such as <a href="https://getbootstrap.com/docs/4.0/components/navbar/#placement" target="_blank">Bootstrap4 .navbar .fixed-top</a>, the options below will help you.
           </p>
-          <p class="lang_ja">
+          <p lang="ja">
             <a href="https://getbootstrap.com/docs/4.0/components/navbar/#placement" target="_blank">Bootstrap4 .navbar .fixed-top</a>のような固定メニューに隠れないようにするため、下記のオプションを指定してください。
           </p>
 <pre>
@@ -267,8 +267,8 @@ $('aside').simpleScrollFollow({
 
       <section id="public-method" class="card">
         <h5 class="card-header">
-          <span class="lang_en">Call public method from outside</span>
-          <span class="lang_ja">パブリックメソッドを外部から実行する</span>
+          <span lang="en">Call public method from outside</span>
+          <span lang="ja">パブリックメソッドを外部から実行する</span>
         </h5>
         <div class="card-body">
           <div class="btn-container">
@@ -278,11 +278,11 @@ $('aside').simpleScrollFollow({
             </a>
           </div>
           <p>Since: v3.0.0</p>
-          <p class="lang_en">
+          <p lang="en">
             Set the method name to the first argument.<br>
             The rest argument is for that method.
           </p>
-          <p class="lang_ja">
+          <p lang="ja">
             第1引数にメソッド名を文字列で指定します。<br>
             第2引数以降はそのメソッドの引数になります。
           </p>
@@ -305,8 +305,8 @@ $('#toggle_scroll').click(function() {
 
       <section id="complex" class="card">
         <h5 class="card-header">
-          <span class="lang_en">A more complex example</span>
-          <span class="lang_ja">複雑な使用例</span>
+          <span lang="en">A more complex example</span>
+          <span lang="ja">複雑な使用例</span>
         </h5>
         <div class="card-body">
           <div class="btn-container">
@@ -315,10 +315,10 @@ $('#toggle_scroll').click(function() {
               <svg class="octicon octicon-link-external" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M11 10h1v3c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h3v1H1v10h10v-3zM6 2l2.25 2.25L5 7.5 6.5 9l3.25-3.25L12 8V2H6z"></path></svg>
             </a>
           </div>
-          <p class="lang_en">
+          <p lang="en">
             This plugin is also used in current page.
           </p>
-          <p class="lang_ja">
+          <p lang="ja">
             なお、このページでもこのプラグインを利用しています。
           </p>
         </div>
